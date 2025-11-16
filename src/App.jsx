@@ -1,26 +1,25 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Menu from './components/Menu'
+import About from './components/About'
+import Gallery from './components/Gallery'
+import CTA from './components/CTA'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-white text-neutral-900">
+      <Navbar />
+      <Hero />
+      <Menu />
+      <About />
+      <Gallery />
+      <CTA />
+      <footer className="bg-neutral-900 text-white py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-white/80">© {new Date().getFullYear()} gill&grill. All rights reserved.</p>
+          <div className="text-white/60 text-sm">Crafted with fire & flavor.</div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
